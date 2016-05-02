@@ -62,7 +62,7 @@ def save_data(date, data, location=None, stripheaders=False):
     data = data.split("\n")
     with open(os.path.join(location, str(date.year), str(date.month), "data.csv"), "a") as file:
         for line in data:
-            if re.search("TemperatureF", line) and stripheaders:
+            if re.search("Temperature", line) and stripheaders:
                 continue
             if line == '':
                 continue
